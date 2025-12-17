@@ -1,0 +1,106 @@
+.footer {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-secondary);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-text);
+}
+
+.footer-bottom {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-heading {
+    font-size: 0.8rem;
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse),
+       (max-width: 768px) {
+  .footer-links a:hover {
+    color: var(--color-text-light);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .footer-section {
+    gap: var(--spacing-xs);
+  }
+}

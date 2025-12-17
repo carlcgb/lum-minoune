@@ -1,0 +1,29 @@
+.language-switcher {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.lang-button {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-light);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+  min-width: 32px;
+}
+
+.lang-button:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.lang-button.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}

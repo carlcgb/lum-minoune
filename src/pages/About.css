@@ -1,0 +1,229 @@
+.about {
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-tagline {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  font-weight: 300;
+  margin: 0;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+.section-content p {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+.section-content a {
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: opacity var(--transition-fast);
+}
+
+.section-content a:hover {
+  opacity: 0.7;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.value-item {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.value-item:hover::before {
+  left: 100%;
+}
+
+.value-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.value-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.value-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.contact-info {
+  margin-top: var(--spacing-md);
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-info strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: opacity var(--transition-fast);
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-md) 0;
+  }
+
+  .about-hero {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .about-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .about-tagline {
+    font-size: 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .value-item {
+    padding: var(--spacing-sm);
+  }
+
+  .section-content {
+    font-size: 0.95rem;
+  }
+
+  .section-heading {
+    font-size: 1.25rem;
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse),
+       (max-width: 768px) {
+  .section-content a:hover {
+    opacity: 1;
+  }
+
+  .value-item:hover::before {
+    left: -100%;
+  }
+
+  .value-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .cta-button:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .section-heading {
+    font-size: 1.1rem;
+  }
+
+  .value-title {
+    font-size: 1rem;
+  }
+}
+

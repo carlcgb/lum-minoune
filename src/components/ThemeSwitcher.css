@@ -1,0 +1,23 @@
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+  border-radius: 4px;
+}
+
+.theme-switcher:hover {
+  border-color: var(--color-text);
+  background-color: var(--color-border);
+}
+
+.theme-switcher svg {
+  width: 18px;
+  height: 18px;
+}

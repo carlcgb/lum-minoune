@@ -1,0 +1,230 @@
+.contact {
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  font-weight: 300;
+  margin: 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.contact-item {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+
+.contact-item-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.contact-link {
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: opacity var(--transition-fast);
+  display: inline-block;
+}
+
+.contact-link:hover {
+  opacity: 0.7;
+}
+
+.contact-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: none;
+  transition: opacity var(--transition-fast);
+  align-self: flex-start;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+.contact-cta {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.cta-link {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: opacity var(--transition-fast);
+}
+
+.cta-link:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 968px) {
+  .contact {
+    padding: var(--spacing-md) 0;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .contact-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.25rem;
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse),
+       (max-width: 768px) {
+  .contact-link:hover {
+    opacity: 1;
+  }
+
+  .submit-button:hover {
+    opacity: 1;
+  }
+
+  .cta-link:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .contact-hero {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .contact-item {
+    padding: var(--spacing-sm);
+  }
+
+  .submit-button,
+  .cta-link {
+    width: 100%;
+    text-align: center;
+  }
+}
