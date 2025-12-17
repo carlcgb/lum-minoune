@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, FC } from 'react';
 
 type Language = 'en' | 'fr';
 
@@ -184,7 +184,7 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+export const LanguageProvider: FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     // Detect browser language or use stored preference
     const stored = localStorage.getItem('language') as Language;
