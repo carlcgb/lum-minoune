@@ -1,10 +1,9 @@
 import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './Cart.css';
 
 const Cart: React.FC = () => {
-  const navigate = useNavigate();
   const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart();
   const total = getTotalPrice();
 
