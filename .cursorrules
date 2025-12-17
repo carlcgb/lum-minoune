@@ -1,0 +1,136 @@
+# Cursor Rules — Enhanced Boutique E-commerce Website
+
+## Project Goal
+Create a totally new, enhanced version of the reference website:
+https://lm-by-karine.square.site/
+
+The new site must NOT be a visual or structural clone.
+It should feel premium, modern, immersive, and custom-built.
+
+This is a boutique e-commerce shop experience with strong emphasis on:
+- Aesthetic design
+- Conversion
+- Micro-interactions
+- Cursor-driven UX enhancements
+
+---
+
+## Reference Usage Rules
+- Use the reference site ONLY to understand:
+  - Type of business (boutique / beauty / lifestyle shop)
+  - Product-driven layout
+  - E-commerce needs (catalog, product cards, CTA flow)
+- Do NOT replicate:
+  - Layout structure
+  - Spacing
+  - Colors
+  - Typography
+  - Section order
+- The final result must be clearly distinguishable and original.
+
+---
+
+## Design Direction
+- Premium boutique feel
+- Modern editorial layouts
+- Soft luxury (not corporate, not generic)
+- Clean negative space
+- Subtle animations over heavy effects
+
+Design should feel:
+- Hand-crafted
+- Elegant
+- Trustworthy
+- Conversion-focused
+
+---
+
+## Cursor & Interaction System (High Priority)
+
+### Cursor Principles
+- Default system cursor must be replaced on desktop
+- Cursor is a core interaction element, not decoration
+- Cursor behavior should adapt based on context
+
+### Required Cursor Behaviors
+- Smooth animated cursor follower (spring or lerp-based motion)
+- Cursor scales or morphs on:
+  - Buttons
+  - Links
+  - Product cards
+  - Add-to-cart CTAs
+- Cursor displays contextual states, such as:
+  - “View”
+  - “Shop”
+  - “Add”
+- Cursor interaction must feel intentional and performant
+
+### Cursor Constraints
+- Cursor effects must never block usability
+- Cursor must be disabled automatically on touch devices
+- Fallback to native cursor if JavaScript fails
+
+---
+
+## Motion & Micro-Interactions
+- Use subtle hover animations on:
+  - Product cards
+  - Images
+  - Buttons
+- Prefer transforms and opacity over layout shifts
+- Avoid excessive animation durations
+- Motion should guide attention, not distract
+
+---
+
+## E-commerce UX Rules
+- Product discovery must be fast and clear
+- CTAs must always remain obvious
+- Add-to-cart and checkout flow should feel lightweight
+- Visual hierarchy must prioritize products and pricing
+- No experimental UI that harms conversion
+
+---
+
+## Accessibility & Performance
+- Respect reduced motion preferences
+- Maintain sufficient color contrast
+- Cursor enhancements must not break keyboard navigation
+- Optimize for performance (no heavy cursor particle systems)
+
+---
+
+## Technical Expectations
+- Write clean, readable, modular code
+- Favor modern CSS (flex, grid, variables)
+- Use lightweight vanilla JS or minimal libraries
+- Avoid overengineering
+
+---
+
+## React / Frontend Architecture Rules
+- Prefer React with functional components
+- Cursor logic must be component-based and reusable
+- Cursor state should be managed globally (Context or store)
+- Cursor must respond to component-level intent (hover, focus, active)
+- Avoid direct DOM manipulation unless strictly necessary
+- Cursor animation should use requestAnimationFrame or motion libraries
+- Components must remain usable if cursor enhancements are disabled
+
+---
+
+## Output Expectations
+When generating code or designs:
+- Assume this is a production-grade website
+- Prioritize maintainability
+- Avoid placeholders unless explicitly requested
+- Explain cursor-related logic when relevant
+
+---
+
+## Decision Priority Order
+1. Usability
+2. Conversion
+3. Visual clarity
+4. Cursor & motion polish
+5. Aesthetic details
